@@ -1,0 +1,304 @@
+﻿
+
+body {
+	font: 100%  font-family: Microsoft Sans Serif;
+	margin: 0; 
+	padding: 0;
+	text-align: center; 
+	color: #000000;
+	background-image:url('../Images/body_bg2.jpg');
+	background-repeat:repeat-x;
+
+}
+
+.FontStyle
+{
+    
+    font-size:8px;
+    
+    }
+
+.styledropdown
+{
+    background-color: #dfe9f5;
+    color: #333333;
+    
+}
+
+.FormHeading
+{
+    font-size: 14px;
+        
+    width:850px;
+    padding: 10px 5px 10px 18px;
+    color: #006699;
+  font-family : Microsoft Sans Serif;
+    
+    
+}
+.ErrorMessage
+
+{
+font-size: 12px;
+        
+   
+    padding: 0px 5px 10px 18px;
+    clear:both;
+    
+    
+    color:Red;
+  font-family : Microsoft Sans Serif;
+    
+    
+    
+  }
+
+
+
+.style8
+{
+    font-size: 12px;
+    font-family: Microsoft Sans Serif;
+    color: #666666;
+}
+
+.headingbg
+{
+	
+	color:Black;
+	
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-family: Microsoft Sans Serif;
+	padding:5px;
+	padding-top:0px;
+	text-align:left;
+	margin-bottom:10px;
+	height:35px;
+	background-repeat:repeat-x;
+}
+
+.MainHeading
+
+{
+    font-size:18px;
+    font-family:Arial;
+    padding:15px;
+    padding-left:20px;
+    color:#006699; 
+    
+    
+    
+    
+    }
+    
+    .bodytext
+
+{
+    font-size:12px;
+    font-family:Microsoft Sans Serif;
+    font-weight:normal;
+    text-decoration:none;
+
+   
+
+    
+    
+    
+    
+    }
+    
+    .flaotleft
+    {
+        
+        float:right;
+        margin-right:5px;
+        margin-bottom:8px;
+        
+        }
+
+.inputfields
+{
+	 font-family: Microsoft Sans Serif;
+	font-size: 14px;
+	color: #CECECE;
+}
+
+.oneColFixCtrHdr #container 
+
+ {
+	
+	width: 950px;  	
+	margin: 0 auto; 
+	text-align: left; 
+
+
+}
+.oneColFixCtrHdr #header {
+
+	
+}
+.oneColFixCtrHdr #header h1 {
+	margin: 0; 
+	padding: 10px 0; 
+}
+.oneColFixCtrHdr #mainContent {
+
+	width: 950px;  
+	
+}
+.oneColFixCtrHdr #footer {
+	padding: 0 10px; 
+	
+
+}
+.oneColFixCtrHdr #footer p {
+	margin: 0;
+	padding: 10px 0; 
+	background-color:Black;
+	height:20px;
+}
+		
+input[type="text"], textarea, checkboxes, input[type="password"]
+{
+    font-family: Microsoft Sans Serif;
+    font-size: 11px;
+    margin-bottom: 0px;
+    display: block;
+    padding: 4px;
+    border: 1px solid #A8C2E3;
+    /*background-image:url(../Images/inputfield_bg.png); */
+    margin-right: 10px;
+    margin-top: 2px;
+    background-repeat: repeat-x;
+ 
+} 
+
+input[type="text"]:focus, textarea:focus , select:focus , checkboxes:focus, input[type="password"]:focus
+{
+    background-image: none;
+    background-color: #ffffff;
+    border: solid 1px #33677F;
+}
+
+input[type="file"]
+{
+    background-image: none;
+    background-color: #ffffff;
+    border: 1px solid #C0C0C0;
+    
+}
+
+.DropdownList
+{
+    
+
+   background-image: none;
+   background-color: #ffffff;
+   border: solid 1px #33677F;
+   font-family:Microsoft Sans Serif;
+   font-size:10px;
+   
+    
+}
+
+select
+{/*
+   background-image: none;
+   background-color: #ffffff;
+   border: solid 1px #33677F;
+   font-family:Microsoft Sans Serif;
+   font-size:10px;*/
+}
+
+input[type="submit"],input[type="button"]
+{
+	/*display: block; 
+	position: relative; 
+	background-image:url(../Images/button_bg1.jpg);
+	padding: 5px 10px;
+	color: #000; 
+	text-decoration: none;
+	cursor: pointer;
+	font-weight:bold; */
+
+	font-family:Microsoft Sans Serif;
+	color:#006699;
+	border:1px solid white;
+	padding:1px 0px;
+	background-image:url(../Images/button_bg1.jpg);
+	height:30px;
+	
+	
+	font-family:Microsoft Sans Serif;
+	color:#006699;
+	border:1px solid white;
+	padding:1px 0px;
+	background-image:url(../Images/button_bg1.jpg);
+	height:30px;
+	
+	
+	 
+	
+	 
+	
+	
+}
+
+input[type="button"]:hover
+{
+	/*display: block; 
+	position: relative; 
+	background-image:url(../Images/button_bg1.jpg);
+	padding: 5px 10px;
+	color: #000; 
+	text-decoration: none;
+	cursor: pointer;
+	font-weight:bold; */
+
+	font-family:Microsoft Sans Serif;
+	color:#006699;
+	border:1px solid white;
+	padding:1px 0px;
+	background-image:url(../Images/button_bg1_hover.jpg);
+	height:30px;
+
+}
+input[type="submit"]:active, input[type="button"]:active
+{
+    /*display: block; 
+	position: relative; 
+	background-image:url(../Images/button_bg1.jpg);
+	padding: 5px 10px;
+	color: #000; 
+	text-decoration: none;
+	cursor: pointer;
+	font-weight:bold; */
+    font-family: Microsoft Sans Serif;
+    color: #003366;
+    border: 1px solid white;
+    padding: 1px 0px;
+    background-image: url(../Images/button_bg1.jpg);
+    height: 30px;
+}
+
+input[type="submit"]:visited,input[type="button"]:visited
+{
+	/*display: block; 
+	position: relative; 
+	background-image:url(../Images/button_bg1.jpg);
+	padding: 5px 10px;
+	color: #000; 
+	text-decoration: none;
+	cursor: pointer;
+	font-weight:bold; */
+
+	font-family:Microsoft Sans Serif;
+	color:#006699;
+	border:1px solid white;
+	padding:1px 0px;
+	background-image:url(../Images/button_bg1.jpg);
+	height:30px;
+
+}

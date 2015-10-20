@@ -1,0 +1,101 @@
+/****************************************************/
+/*   Stylesheet developed on:	26-11-09		 	*/
+/*	 Developed by:				Grubforce        	*/
+/****************************************************/   
+
+/* In this stylesheet you will find the core styles defined for the Discovery template || IE7 */
+
+/*******************/
+/*   Site Basics   */
+/*******************/
+
+hr { width: 600px; clear: left; background-color: #f1f1f1; }
+
+/*******************/
+/*   Text styles   */
+/*******************/
+
+	a.white { background-color: white; display: inline-block; height: 30px; line-height: 30px; font-size: 13px; color: #797979; float: right; position: absolute; z-index: 15; margin: 340px 20px 0 835px; padding: 0 15px; }
+
+	* html a.white { background-color: white; display: inline-block; height: 30px; line-height: 30px; font-size: 13px; color: #797979; float: right; position: absolute; z-index: 15; padding: 0 15px; margin: 340px 20px 0 835px; }
+
+	p.hireline { display: none; }
+
+	p.chap { clear: left; width: 600px; margin-bottom: 30px; }
+
+	p.col3_box { display: inline; float: left; width: 260px; }
+
+/***************/
+/*   Columns   */
+/***************/
+
+/* Box full*/
+
+.box_full { width: 938px; float: left; display: inline; background-color: #fff; border: 1px solid #f1f1f1; padding: 20px; margin: 0 0 40px; }
+
+	* html .box_full { width: 938px; float: left; display: inline; background-color: #fff; border: 1px solid #f1f1f1; padding: 20px; margin: 0 0 40px; }
+
+/* Col 2 wrapper */
+
+div.col2_wrapper { float: left; display: inline; }
+
+	* html div.col2_wrapper { float: left; display: inline; }
+
+	div.col2_content { display: inline; float: left; width: 548px; 
+margin-right: 38px; }
+
+		* html div.col2_content { display: inline; float: left; width: 640px; margin-right: 38px; }
+
+		div.col2_content_box { float: left; width: 505px; 
+background-color: #fff; border: 1px solid #f1f1f1; margin-bottom: 40px; padding: 19px; display: inline; }
+
+			* html div.col2_content_box { float: left; width: 600px; background-color: #fff; border: 1px solid #f1f1f1; margin-bottom: 40px; padding: 19px; display: inline; }	
+
+	/* Sidebar */
+
+	div.col2_sidebar { float: right; display: inline; width: 300px; }
+
+		* html div.col2_sidebar { float: right; display: inline; width: 300px; }
+
+		div.sidebar_box { width: 258px; float: left; background-color: #fff; border: 1px solid #f1f1f1; margin-bottom: 40px; padding: 20px; }
+
+			* html div.sidebar_box { width: 258px; float: left; background-color: #fff; border: 1px solid #f1f1f1; margin-bottom: 40px; padding: 20px; }
+
+		div.sidebar_box { width: 258px; float: left; background-color: #fff; border: 1px solid #f1f1f1; margin: 0 0 40px; padding: 20px; }
+
+			* html div.sidebar_box { width: 258px; float: left; background-color: #fff; border: 1px solid #f1f1f1; margin: 0 0 40px; padding: 20px; }
+			
+/*****************/
+/*   Portfolio   */
+/*****************/
+
+div.portfolio_wrapper { float: left; width: 980px; margin: 0 0 40px; }
+
+	* html div.portfolio_wrapper { float: left; width: 980px; margin: 0 0 40px; }
+
+	div.box { width: 258px; float: left; display: inline; border: 1px solid #efefef; padding: 20px;
+	height: 163px;
+}
+
+		* html div.box { width: 258px; float: left; display: inline; border: 1px solid #efefef; padding: 20px; }
+
+	div.left { margin: 0 37px 0 0;
+	height: 163px;
+}
+
+		* html div.left { margin: 0 37px 0 0; }
+	
+		div.box IMG { margin: 0 0 20px;
+	height: 163px;
+}
+
+			* hmtl div.box IMG { margin: 0 0 20px; }
+			
+/*********************/
+/*   SHOWCASE HOME   */
+/*********************/
+
+span.prev { display: none; }
+
+span.next { display: none; }
+

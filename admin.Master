@@ -1,0 +1,100 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="UC_LIVE.admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<link href="Styles/layout.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/links.css" rel="stylesheet" type="text/css" />
+
+	<link href="Styles/textstyles.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/grid.css" rel="stylesheet" type="text/css" />
+	<link href="Styles/tabs.css" rel="stylesheet" type="text/css" />
+<title></title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+
+</head>
+<body class="oneColFixCtrHdr">
+	<form id="form1" runat="server">
+	<asp:ScriptManager ID="ScriptManager1" runat="server">
+	</asp:ScriptManager>
+	<div id="container">
+		<div id="header">
+			<!-- end #header -->
+		</div>
+		<div id="mainContent">
+			<div style="height: 27px; width: 830px;" class="text_12">
+				<div style="float: left;">
+					<img src="Images/icons/icon_user.png" alt="User:" /></div>
+				<div style="float:left; padding-top: 2px; color: White" id="DivUserName" runat="server"></div>
+				<div  style="float: right; height: 20px; width: 271px;">
+					<div style="float: left;">
+						<img src="Images/Icons/icon_clock.png" alt="Time" /></div>
+					<div runat="server" id="DivTodayDate" style="float: left; padding-top: 2px; padding-left: 5px; color: White" class="text_12">
+						</div>
+					<div style="float: left;">
+						<img src="Images/Icons/icon_logout.png" alt="logout: " /></div>
+					<div style="float: left; padding-top: 2px; padding-left: 5px; color: White; height: 0px; width: 48px;" class="text_12">
+						<asp:LinkButton ID="Logout" runat="server" onclick="Logout_Click" ForeColor="White">Logout</asp:LinkButton>	</div>
+				</div>
+			</div>
+					<div style="padding-left: 5px; margin-left:0px;">
+					<img src="Images/logo1.png" alt="UC Live" /></div>
+			<div id="logo" style="width: 950px; margin-top:-8px;">
+		
+				<div id="Menu" style="height: 32px; float: right; margin-top: 0px;">
+				<%--<div id="WelcomeMessage" runat="server" style="color:White; font-size:22px; margin-left:400px;"> 
+				Welcome to UC Live Admin System
+				</div>--%>
+					<div class="top_menu" id="TopMenu" runat="server" style="margin-left:230px">
+						<div style="float: left;">
+							<a href="CreateNewUser.aspx" class="top_menu">
+								<img src="Images/Icons/Icon_createuser.png" border="0"/></a></div>
+						<div style="float: left;"> 
+					<%--		<a href="userlist.aspx" class="top_menu">
+								&nbsp;&nbsp;Find Users</a></div>
+						<div style="float: left;">--%>
+							<a href="ManageUsers.aspx" class="top_menu">
+							<img src="Images/Icons/Icon_viewusers.png" border="0"/></a></div>								
+					<div style="float: left;">
+							<a href="ManageRoles.aspx?ContactType=Engineer" class="top_menu">
+								<img src="Images/Icons/Icon_userroles.png" border="0"/></a>
+						<%--	<img alt="click here for more options." src="/images/icons/DownArrow.png" width="16" height="16" onclick="ShowHide('EngineerMenu');" style="vertical-align: bottom; cursor: hand;" />
+							<div id="EngineerMenu" style="visibility: hidden; display: none; position: relative;">
+								<ul style="background-color: #efefef; border: outset: 2px gray; position: absolute;">
+									<li onclick="ShowHide('EngineerMenu');">asdfasdf</li>
+									<li onclick="ShowHide('EngineerMenu');">asdfasdf</li>
+									<li onclick="ShowHide('EngineerMenu');">asdfasdf</li>
+									<li onclick="ShowHide('EngineerMenu');">asdfasdf</li>
+									<li onclick="ShowHide('EngineerMenu');">asdfasdf</li>
+								</ul>
+							</div>--%>
+						</div>
+								<div style="float: left;">
+							<a href="AdminDetails.aspx?ContactID=1885" class="top_menu">
+										<img src="Images/Icons/IconsAdmin.png" border="0"/></a></div>
+						<div style="float: left;">
+							<a href="home1.aspx" class="top_menu">
+										<img src="Images/Icons/Icon_mainsite.png" border="0"/></a></div>
+		</div>
+		
+	
+
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			
+			</asp:ContentPlaceHolder>
+		
+		<!-- end #mainContent -->
+	</div>
+	<div id="footer" style="color: Lime;">
+		<!-- end #footer -->
+		<br />
+		<br />
+	</div>
+	<!-- end #container -->
+	</div>
+	</form>
+
+</body>
+</html>

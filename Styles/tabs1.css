@@ -1,0 +1,82 @@
+﻿/*AJAX.NET TAB CONTROL */
+.ajax__tab_xp .ajax__tab_header {
+    font-family:verdana,tahoma,helvetica;
+    font-size:11px;
+
+    background:
+        url(AjaxControlToolkit.Tabs.tab-line.gif")%>) 
+        repeat-x 
+        bottom;
+}
+.ajax__tab_xp .ajax__tab_outer {
+    padding-right:4px;
+    background:
+        url(AjaxControlToolkit.Tabs.tab-right.gif")%>) 
+        no-repeat 
+        right;
+    height:21px;
+}
+.ajax__tab_xp .ajax__tab_inner {
+    padding-left:3px;
+    background:
+        url(AjaxControlToolkit.Tabs.tab-left.gif")%>) 
+        no-repeat;
+}
+.ajax__tab_xp .ajax__tab_tab {
+    height:13px;
+    padding:4px;
+    margin:0;
+    background:
+        url(AjaxControlToolkit.Tabs.tab.gif")%>) 
+        repeat-x;
+}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_outer {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-hover-right.gif")%>) 
+        no-repeat 
+        right;
+}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_inner {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-hover-left.gif")%>) 
+        no-repeat;
+}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_tab {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-hover.gif")%>) 
+        repeat-x;
+}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_outer {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-active-right.gif")%>) 
+        no-repeat 
+        right;
+}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_inner {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-active-left.gif")%>) 
+        no-repeat;
+}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_tab {
+    background:
+        url(AjaxControlToolkit.Tabs.tab-active.gif")%>) 
+        repeat-x;
+}
+.ajax__tab_xp .ajax__tab_body {
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    border:1px solid #999999;
+    border-top:0;
+    padding:10px;
+    background-color:#ffffff;
+    
+}
+
+
+
+#TaskList
+
+{
+	  width:350px;
+	
+	}

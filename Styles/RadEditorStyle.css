@@ -1,0 +1,27 @@
+﻿body
+{
+
+background-color: white;
+padding:3px;
+background-image: none;
+margin: 0px;
+text-align: left;
+}
+
+OL
+{
+    list-style-type: upper-roman;
+}
+OL OL
+{
+    list-style-type: decimal;
+}
+UL
+{
+    list-style-type: square;
+}
+UL UL
+{
+    list-style-type: disc;
+}  
+

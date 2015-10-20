@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cu3er>
+	<settings>
+		
+    	<prev_button>
+			<defaults round_corners="25,25,25,25"/>
+			<tweenOver tint="0x000000" scaleX="1" scaleY="1"/>
+			<tweenOut tint="0x000000" />
+		</prev_button>
+		
+    	<prev_symbol>
+    		<defaults type="7" />
+			<tweenOver tint="0xFFFFFF" />			
+		</prev_symbol>
+		
+    	<next_button>
+			<defaults round_corners="25,25,25,25"/>			
+			<tweenOver tint="0x000000"  scaleX="1" scaleY="1"/>
+			<tweenOut tint="0x000000" />
+		</next_button>
+		
+    	<next_symbol>
+    		<defaults type="7" />
+			<tweenOver tint="0xFFFFFF" />
+		</next_symbol>	
+		
+		<description>
+			
+			<defaults 
+				round_corners="0, 0, 0, 0"
+				
+				heading_font="Champagne Limousines"
+				heading_text_size="40"
+				heading_text_color="0xFFFFFF"
+				heading_text_margin="20,0,10,20"
+				
+				paragraph_font="Lucida Grande"
+				paragraph_text_size="13"
+				paragraph_text_color="0xFFFFFF"
+				paragraph_text_margin="0, 0, 0, 20"	
+						
+			/>
+			<tweenIn tint="0x000000" x="0" y="280" alpha="0.8" width="980" height="110" />
+			<tweenOut time=".1" />
+			<tweenOver tint="0X00000" alpha="1" />
+			
+		</description>
+			
+		<auto_play>
+          
+          	<defaults symbol="circular" time="7" />
+			<tweenIn x="950" y="30" width="20" height="20" tint="0xFFFFFF" />
+      	
+      	</auto_play>
+      
+	</settings>   
+	
+	<!-- Start of Slide configuration --> 
+
+	<slides>
+	
+        <slide>
+            <url>core/trend_images/slide_5.jpg</url>
+            <description>
+				<link target="_self">Products.html</link>    
+				<heading>Bengali Mix</heading>
+				<paragraph></paragraph>
+			</description>
+        </slide>
+		<!-- changing transition between first & second slide -->
+        <transition num="3" slicing="vertical" direction="down"/>
+        <slide>
+       		<url>core/trend_images/slide_1.jpg</url>
+       		<description>
+				<link target="_self">products.html</link>    
+				<heading>Kaju Mix</heading>
+				<paragraph></paragraph>
+			</description>
+        </slide>		
+		<!-- changing transition between second & third slide -->
+        <transition num="4" direction="right" shader="flat" />
+		<slide>
+            <url>core/trend_images/slide_2.jpg</url>
+            <description>
+				<link target="_self">Products.html</link>    
+				<heading>Gajerala</heading>
+				<paragraph></paragraph>
+			</description>
+        </slide>
+        <!-- transitions properties defined in transitions template -->
+		<slide>
+       		<url>core/trend_images/slide_3.jpg</url>
+       		<description>
+				<link target="_self">Products.html</link>    
+				<heading>Samosas</heading>
+				<paragraph></paragraph>
+			</description>
+        </slide>
+		<transition num="6" slicing="vertical" direction="up" shader="flat" delay="0.05" z_multiplier="4" />
+        <slide>
+       		<url>core/trend_images/slide_4.jpg</url>
+       		<description>
+				<link target="_self">Products.html</link>    
+				<heading>Bengali Mix</heading>
+				<paragraph></paragraph>
+			</description>
+        </slide>
+				
+	</slides>
+	
+	<!-- Start of Slide configuration --> 
+	
+</cu3er>
+

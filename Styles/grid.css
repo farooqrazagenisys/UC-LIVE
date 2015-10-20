@@ -1,0 +1,165 @@
+﻿
+    .HeaderStyle1
+{
+	background-image: url("../Images/Grid/headerbg.jpg");
+	background-repeat: repeat-x;
+	height: 28px;
+	text-align:left;
+	font-family:Microsoft Sans Serif;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:11px;
+	padding-left:10px;
+
+	
+
+}
+
+.ItemStyleCSS
+{
+    padding-left:3px;
+    
+    
+    
+    }
+    .RowStyle1
+{
+	/*background-image: url("../Images/Grid/topbg1.jpg"); */
+
+	height: 25px;
+	text-decoration: none;
+	color: #333;
+	font-family:Microsoft Sans Serif;
+	font-size:12px;
+	padding-left:10px;
+}
+    .AlternatingRowStyle
+{
+    /*  background-image: url("../Images/Grid/topbg1.gif"); */
+    background-color: #F3F3F3;
+
+    background-repeat: repeat-x;
+    height: 28px;
+    text-decoration: none;
+    color: #333;
+}
+    
+       .EditRowSytle
+    {
+       
+        background-color:White;
+        border-bottom: Solid 1px #CCCCCC;
+        background-repeat: repeat-x;
+        height: 35px;
+        text-decoration: none;
+        color: gray;
+        
+        
+    }
+    
+    
+.SelectedRowStyle
+{
+	background-color: #D9F2FF;
+	border-bottom: Solid 1px #CCCCCC;
+	background-repeat: repeat-x;
+	height: 35px;
+	text-decoration: none;
+	color: gray;
+}
+    
+    .FooterStyle1
+    
+    {
+
+        background-image: url("../Images/Grid/topbg1.gif");
+        border-bottom: Solid 1px #CCCCCC;
+        background-repeat: repeat-x;
+        height: 35px;
+        text-decoration: none;
+        color: gray;
+    }
+    
+.PagesStyle1
+{
+	border-bottom: Solid 1px #CCCCCC;
+	background-repeat: repeat-x;
+	height: 35px;
+	text-decoration: none;
+	color: #666666;
+	vertical-align: middle;
+	text-align: center;
+	width: 350px;
+	background-color: #F8F8F8;
+}
+
+.GridView1
+{
+	margin-left:0px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #F2F2F2;
+	border: 1px solid #E4E4E4;
+	width:895px;
+	font-family:Microsoft Sans Serif;
+	text-align:left;
+	margin-left:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+    font-weight:normal;
+}
+
+.GridView1 a
+{
+	text-decoration: none;
+	color: #808080;
+}
+
+.TasksGridView
+{
+	margin-left:0px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #F2F2F2;
+	border: 1px solid #E4E4E4;
+	width:400px;
+}
+
+.TasksGridView
+{
+text-decoration:none;
+	color:White;
+}
+
+.Column150
+{
+	
+			
+		width:200px;
+		padding-left:10px;
+
+}
+	
+.Column70
+{
+	
+			
+		width:70px;
+		padding:5px;
+
+}
+	
+	
+	.Column100
+{
+	
+			
+		width:100px;
+		padding:5px;
+
+}
+	.padding5
+	{
+			padding:5px;
+		}
+	

@@ -1,0 +1,52 @@
+﻿.ajax__tab_lightblue-theme .ajax__tab_header
+{
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size: small;
+    border-bottom: solid 8px #39C;
+    font-weight: bold;
+    border-bottom-width: 8px;
+    border-bottom-color: #333333;
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_outer
+{
+    background-position: #CCCCCC url(../Images/lightblue.jpg) repeat-x;
+    background: #FFFFFF url(../Images/lightblue.jpg) repeat-x;
+    margin: 0px 0.16em 0px 0px;
+    padding: 1px 0px 1px 0px;
+    vertical-align: bottom;
+    border: solid 1px #a3a3a3;
+    border-bottom-width: 0px;
+    color: white;
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#333;
+    padding:0.6em 1em;    
+    margin-right:0.01em;
+}
+.ajax__tab_lightblue-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url(../Images/LightblueHover.jpg) repeat-x left;
+      color:#FFF;
+    
+    
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#333;
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_outer
+{
+	color:#333;
+	/*#39C */
+    background:url(../Images/LightblueHover.jpg) repeat-x left;
+}
+.ajax__tab_lightblue-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#ffffff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}

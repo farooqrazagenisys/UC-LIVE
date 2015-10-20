@@ -1,0 +1,10 @@
+Cufon.replace('h1', {fontFamily: 'Champagne & Limousines'});
+Cufon.replace('h1.main_col', {fontFamily: 'Champagne & Limousines'});
+Cufon.replace('h2');
+Cufon.replace('h2.inline', {fontFamily: 'Champagne & Limousines'});
+Cufon.replace('h3');
+Cufon.replace('h4');
+Cufon.replace('h5');
+Cufon.replace('h6');
+Cufon.replace('a.proposal');
+Cufon.replace('a.feature');

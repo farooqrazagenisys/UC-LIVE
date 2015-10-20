@@ -1,0 +1,639 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PersonalInjuryForm.aspx.cs" Inherits="UC_LIVE.PersonalInjuryForm" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server"><title></title>
+<style type="text/css">
+    .TextAreaStyle
+        {
+            
+           border: 1px solid #EEE;
+           overflow:hidden; 
+   
+            }
+    .style1
+    {
+        width: 512px;
+    }
+    .style2
+    {
+        width: 25px;
+    }
+    .style3
+    {
+        height: 211px;
+    }
+    .style4
+    {
+        width: 512px;
+        height: 211px;
+    }
+    .style5
+    {
+        width: 25px;
+        height: 211px;
+    }
+</style>
+</head>
+<body>
+    <form id="form1" runat="server" style="font-family:Arial;">
+    
+
+   
+
+<%--<div id="test" server" style='width:278px; margin:20px;float:left;  font-family:Arial;     height:80px;'></div>--%>
+    
+        <%--<div id="insurancecompanydiv" runat="server" style='width:278px; margin:20px;float:left;  font-family:Arial;     height:80px;'></div>--%>
+      <%--  <div id="HireStartDate" runat="server" style='width:278px; font-weight:bold; margin-left:200px; margin-top:20px; float:left;  font-family:Arial;     height:60px; font-size:12px;'>--%>
+        <br />
+        
+     
+     
+     
+       
+      
+               <div style="clear:both;">
+        
+        
+        
+                <%--<img src="../Images/Icons/document-print.png" style="cursor: pointer; cursor: hand;
+        padding-right: 10px;" onclick="JavaScript:Print('Actions');" alt="Print" />--%>
+        
+       <input type="image" value="Print" onclick="window.print(); return false;" src="../Images/Icons/document-print.png"  />
+     
+ 
+</div>
+        <div id="Actions">
+       
+           <div id="DocumentHeader1" runat="server" style="margin-left:70px;"></div>
+ <div id="SolicitorCompany" runat="server" style="width:275px; margin-top:50px; margin-left:130px; float:left; font-family:Arial;height:50px;"></div>
+        <div id="HireStartDate" runat="server" style="width:178px; font-weight:bold; margin-left:250px; margin-top:40px; float:left;font-family:Arial; height:70px; font-size:12px;">
+ </div>
+ <div style="Clear:both"></div>
+ <%--<div id="SolicitorCompany" runat="server" style="float:left;"></div>
+   <div id="HireStartDate" runat="server" style="float:left"></div>--%>   
+        <table style="width: 700px; margin-top: 2px; font-family: Arail; font-size: 11px;" align="center">
+            <tr>
+                <td colspan="4" align="center" style="text-align: center; font-family: Arail;
+                    font-size: 11px;" valign="top">
+                   
+                    <h2 style="text-align: center; background-color:#FFF;color:#1d398d; padding:10px; padding-top:2px; font-family:Times New Roman;">
+                        INJURY CLAIM FORM </h2>
+                            <div style="text-align: center; background-color:#FFF;color:#000; padding:10px; font-family:Times New Roman;">
+                               Initial Notification:<div id="ClaimRef" style="font-size:45px;" runat="server"></div>
+                                   <div style="color: #1d398d;  margin-left: 10px;  padding-bottom: 0px;
+                             font-family: Arial; font-size: 11px; border:solid 1px white; color:Black;">
+                              <%--<asp:DetailsView ID="DetailsView7" runat="server" AutoGenerateRows="False" 
+                                  DataSourceID="SqlDataSource7" Height="24px" BackColor="White" BorderColor="#CCCCCC" 
+                                           BorderStyle="None" BorderWidth="0px" CellPadding="4" ForeColor="Black" 
+                                           GridLines="Horizontal">
+                                  <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                                  <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                                  <Fields>
+                                      <asp:BoundField DataField="DriverPolicyNo" HeaderText="TP Driver Policy No:" />
+                                  </Fields>
+                                  <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                                  <EditRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                              </asp:DetailsView>--%>
+                              <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=8">
+                                  <SelectParameters>
+                                      <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                                  </SelectParameters>
+                              </asp:SqlDataSource>
+           </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="style13">
+                </td>
+                <td class="style1" valign="top" style="font-family: Arail; font-size: 11px;">
+                    <h3 style="color: #FFF; background-color:#203a8e;  text-align:center; padding:5px;height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        Our Client (Claimant) Details</h3>
+                    <asp:DetailsView ID="DetailsView21" runat="server" AutoGenerateRows="False" DataSourceID="ClientSqlDataSource1"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="Company" HeaderText="Company Name:" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="FirstName" HeaderText="First Name:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                            
+                           <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="DOB" HeaderStyle-Font-Bold="true"  DataFormatString="{0:dd-MMM-yyyy}"  />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                             <asp:BoundField DataField="DriverInsurers" HeaderText="Insurer:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                         
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                    
+                 
+                    <asp:SqlDataSource ID="ClientSqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=7">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                          <br />
+                    
+                    </div>
+                    
+                </td>
+                <td class="style2">
+                </td>
+                <td class="style8" valign="top" style="font-family: Arail; font-size: 11px;">
+                    <h3 style="color: #FFF; background-color:#203a8e; padding:5px; height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; text-align:center; padding-left: 10px;">
+                        Party at Fault ( Defendant&#39;s Details)</h3>
+                    
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource1"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                         <asp:BoundField DataField="Company" HeaderText="Company Name:" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="FirstName" HeaderText="First Name:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                           <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="DOB" HeaderStyle-Font-Bold="true"     DataFormatString="{0:dd-MMM-yyyy}" />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />                       
+                          
+                         <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        
+                        
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                                     
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID='8'">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+                   
+                   
+                   
+                   
+                   
+                                 <asp:DetailsView ID="DetailsView5" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource10"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <Fields>
+                         <asp:BoundField DataField="Company" HeaderText="Insurer:" 
+                                HeaderStyle-Font-Bold="true"   ItemStyle-Width="150" >                        
+                        
+                        
+<HeaderStyle Font-Bold="True"></HeaderStyle>
+                            </asp:BoundField>
+                        
+                        
+                        </Fields>
+                    </asp:DetailsView>
+                   
+                   
+                   
+                   
+                   
+                   
+                   <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID='1'">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                   
+                   
+                   
+                </td>
+            </tr>
+            <tr>
+                <td class="style10">
+                    &nbsp;
+                </td>
+                <td class="style1" valign="top" style="font-family: Arail; font-size: 11px;">
+                    <h3 style="color: #FFF;  text-align:center; background-color:#203a8e; padding:5px; height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        Accident Details</h3>
+                    <asp:DetailsView ID="DetailsView22" runat="server" AutoGenerateRows="False" DataKeyNames="ClaimId"
+                        DataSourceID="ClaimSqlDataSourceCircumstances" BackColor="White" 
+                        BorderColor="#DEDFDE" BorderStyle="None"
+                        BorderWidth="0px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="16px"
+                        Style="" Width="322px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="AccidentDate" HeaderText="Accident Date:" SortExpression="AccidentDate"
+                                DataFormatString="{0:dd-MMM-yyyy HH:mm}" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="AccidentLocation" HeaderText="Location:" SortExpression="AccidentLocation" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="ClaimTitle" HeaderText="Description:" SortExpression="AccidentInfo" HeaderStyle-Font-Bold="true" />
+<%--                              <asp:BoundField DataField="AnyWitnesses" HeaderText="Any Witnesses:" SortExpression="AnyWitnesses" HeaderStyle-Font-Bold="true"  />--%>
+                            <asp:BoundField DataField="PoliceAttended" HeaderText="Police Involved:" SortExpression="PoliceAttended" HeaderStyle-Font-Bold="true" />
+                          
+                      <asp:BoundField DataField="PoliceOfficerName" HeaderText="Police Officer Name:" SortExpression="PoliceAttended" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PoliceLogNo" HeaderText="Police Log No:" SortExpression="AnyWitnesses" HeaderStyle-Font-Bold="true"  />
+                     
+                     
+                     
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                    <asp:SqlDataSource ID="ClaimSqlDataSourceCircumstances" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [ClaimId], [AccidentDate],[PoliceOfficerName], [PoliceLogNo], [AccidentLocation],[ClaimTitle],[InjuriesSustained], [AdditionalInfo],[AnyoneInjured],[PoliceAttended] , [AnyWitnesses]  FROM [Claim] WHERE ([ClaimId] = @ClaimId)">
+                        <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </td>
+                <td class="style2">
+                </td>
+                <td class="style8" valign="top" style="font-family: Arail; font-size: 11px;" valign="top">
+  <h3 style="color: #FFF;  text-align:center; background-color:#203a8e; padding:5px; height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">                       
+                        Accident Circumstances</h3>
+             
+                                <asp:DetailsView ID="DetailsView2" runat="server" 
+                        AutoGenerateRows="False" DataSourceID="SqlDataSource2"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="130px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="Accidentinfo" HeaderText="" 
+                                SortExpression="FirstName" HeaderStyle-Font-Bold="true" >
+                           
+
+                            </asp:BoundField>
+                           
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                </td>
+            </tr>
+            <tr>
+                <td class="style7">
+                    <td class="style1" valign="top" 
+                    style="font-family: Arail; font-size: 11px;">
+   <%--                     <h3 style="color: #FFF; text-align:center; background-color:#203a8e; padding:5px; height: 20px; margin-left: 0px; width: 305px; 
+                            font-size: 15px; font-weight: bold; padding-left: 10px;">
+                            Witness 1</h3>
+                        
+                                       <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource3"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="FirstName" HeaderText="First Name:" SortExpression="FirstName" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=6 and Contact.WitnessSequence=1">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>--%>
+                        <br />
+                    </td>
+                    <td class="style2">
+                        &nbsp;
+                    </td>
+                    <td class="style9" valign="top">
+   <%--                     <h3 style="color: #FFF;  text-align:center; background-color:#203a8e; padding:5px; height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                            font-weight: bold; padding-left: 10px;">
+                            Witness 2</h3>
+                                  <asp:DetailsView ID="DetailsView4" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource4"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="FirstName" HeaderText="First Name:" SortExpression="FirstName" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=6 and Contact.WitnessSequence=2">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>--%>
+                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [Accidentinfo], [AccidentDate],[PoliceOfficerName], [PoliceLogNo], [AccidentLocation],[ClaimTitle],[InjuriesSustained], [AdditionalInfo],[AnyoneInjured],[PoliceAttended] , [AnyWitnesses]  FROM [Claim] WHERE ([ClaimId] = @ClaimId)">
+                        <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    </td>
+                </td>
+            </tr>
+              <tr>
+            
+            <td>
+            
+            </td>
+            <td colspan="3">
+            
+  <h3 
+                    
+                    
+                    style="color: #FFF;  text-align:center; background-color:#203a8e; height: 20px; margin-left: 0px; width: 750px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">                       
+                        Who was to blame & Why</h3>
+                              
+                                <asp:DetailsView ID="DetailsView25" runat="server" 
+                        AutoGenerateRows="False" DataSourceID="SqlDataSource8"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="130px" Style=""
+                        Width="765px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                            <asp:BoundField DataField="WhotoBlame" HeaderText="" 
+                                SortExpression="WhotoBlame" HeaderStyle-Font-Bold="true" >
+                           
+<HeaderStyle Font-Bold="True"></HeaderStyle>
+                            </asp:BoundField>
+                           
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                                 <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+  SelectCommand="SELECT [WhotoBlame], [AccidentDate],[PoliceOfficerName], [PoliceLogNo], [AccidentLocation],[ClaimTitle],[InjuriesSustained], [AdditionalInfo],[AnyoneInjured],[PoliceAttended] , [AnyWitnesses]  FROM [Claim] WHERE ([ClaimId] = @ClaimId)">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+             <br />
+            </td>
+        
+               <br />
+            </tr>
+
+            <tr>
+                <td class="style7">
+                    <td class="style1" valign="top" 
+                    style="font-family: Arail; font-size: 11px;">
+                    <h3 style="color: #FFF; background-color:#203a8e;  text-align:center; padding:5px;height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        GP Details</h3>
+                        
+                    <asp:DetailsView ID="DetailsView23" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource3"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                           
+                            
+                            <asp:BoundField DataField="Surname" HeaderText="Surgery Name:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+<asp:BoundField DataField="FirstName" HeaderText="GP Name:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                                <asp:BoundField DataField="InjuriesSustained" HeaderText="Injuries Sustained:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                            
+<%--                           <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                             <asp:BoundField DataField="DriverInsurers" HeaderText="Insurer:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />--%>
+                           
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                   <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=10">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+                        <br />
+                        
+                </td>
+                    <td class="style2">
+                        &nbsp;
+                    </td>
+                    <td class="style9" valign="top">
+                    <h3 style="color: #FFF; background-color:#203a8e;  text-align:center; padding:5px;height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        Hospital Details</h3>
+                        
+                    <asp:DetailsView ID="DetailsView24" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource4"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                         
+                            <asp:BoundField DataField="FirstName" HeaderText="Hospital Name:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Surname" HeaderText="Department:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="OtherLosses" HeaderText="Other Losses:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                            
+                        <%--   <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                             <asp:BoundField DataField="DriverInsurers" HeaderText="Insurer:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                           --%>
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                       <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=11">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+                        </td>
+                </td>
+            </tr>
+           
+    
+    <tr>
+ 
+                <td class="style3">
+                    <td class="style4" valign="top" 
+                    style="font-family: Arail; font-size: 11px;">
+                    <h3 style="color: #FFF; background-color:#203a8e;  text-align:center; padding:5px;height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        Witness(1) Details</h3>
+                        
+                    <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource5"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                           
+                            <asp:BoundField DataField="FirstName" HeaderText="FirstName:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                               
+<%--                           <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                             <asp:BoundField DataField="DriverInsurers" HeaderText="Insurer:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />--%>
+                           
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                   <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=6 and WitnessSequence=1">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+                        <br />
+                        
+                </td>
+                    <td class="style5">
+                        &nbsp;
+                    </td>
+                    <td class="style3" valign="top">
+                    <h3 style="color: #FFF; background-color:#203a8e;  text-align:center; padding:5px;height: 20px; margin-left: 0px; width: 305px; font-size: 15px;
+                        font-weight: bold; padding-left: 10px;">
+                        Witness(2) Details</h3>
+                        
+                    <asp:DetailsView ID="DetailsView4" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource6"
+                        BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="0px"
+                        CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="24px" Style=""
+                        Width="319px">
+                        <FooterStyle BackColor="#CCCC99" />
+                        <RowStyle BackColor="#EEEEEE" />
+                        <PagerStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Right" />
+                        <Fields>
+                         
+                                   <asp:BoundField DataField="FirstName" HeaderText="FirstName:" SortExpression="FirstName" ItemStyle-Width="150" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Surname" HeaderText="Surname:" SortExpression="Surname" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address1" HeaderText="Address1:" SortExpression="Address1" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Address2" HeaderText="Address2:" SortExpression="Address2" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="City" HeaderText="City:" SortExpression="City" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="PostCode" HeaderText="Post Code:" SortExpression="PostCode" HeaderStyle-Font-Bold="true"  />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone:" SortExpression="Phone" HeaderStyle-Font-Bold="true"  />
+                       
+                        <%--   <asp:BoundField DataField="DOB" HeaderText="D.O.B:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                            <asp:BoundField DataField="NINo" HeaderText="N.I No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                             <asp:BoundField DataField="DriverInsurers" HeaderText="Insurer:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                        <asp:BoundField DataField="DriverPolicyNo" HeaderText="Policy No:" SortExpression="Phone" HeaderStyle-Font-Bold="true" />
+                           --%>
+                        
+                        </Fields>
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <EditRowStyle BackColor="#EEEEEE" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" />
+                    </asp:DetailsView>
+                       <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+ SelectCommand="Select * from Claim , ClaimContact, Contact where Claim.ClaimId = ClaimContact.ClaimID and ClaimContact.ContactID = Contact.ContactID and Claim.ClaimId=@ClaimId and ClaimContact.ContactTypeID=6 and WitnessSequence=2">
+                          <SelectParameters>
+                            <asp:QueryStringParameter Name="ClaimId" QueryStringField="ClaimId" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
+                        </td>
+                </td>
+              
+   
+            </tr>
+            <tr>  <td colspan="4">
+                             
+          
+               <div id="FooterValue" runat="server" style="text-align:center; width:750px; margin-top:1150px; margin-left:25px; "></div>
+                </td></tr>
+           
+        </table>
+    </div>       
+       
+ </form>
+</body>
+</html>

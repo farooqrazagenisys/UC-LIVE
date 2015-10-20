@@ -1,0 +1,161 @@
+﻿
+/* CSS Document */
+
+.inputtext
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ padding:3px;
+ font-weight:normal;
+ background-color:#FFFFFF; 
+ margin-left:5px;
+ width:35px;
+ 
+}
+
+.button_style
+{
+  font-size:18px;	
+}
+
+input[type='text']
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ padding:3px;
+ vertical-align:middle;
+ border:1px solid #CCCCC;
+ font-weight:normal;
+ background-color:#FFFFFF; 
+ margin-left:5px;
+ width:35px;
+ 
+}
+input[type='textarea']
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ padding:5px;
+ vertical-align:middle;
+ border:1px solid #CCCCC;
+ font-weight:normal;
+ margin:2px;
+ background-color:#FFFFFF;
+ width:450px;
+ margin-left:10px;
+
+
+ 
+}
+
+
+
+input[type='checkboxe']
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ padding:5px;
+ vertical-align:middle;
+ border:0px solid #FFFFFF;
+ font-weight:normal;
+ margin:2px;
+ background-color:#FFFFFF;
+ width:450px;
+ margin-left:10px;
+
+
+ 
+}
+select
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:10px;
+ line-height:2px;
+ background-color:#FFFFFF;
+ height:20px;
+ border:1px solid #CCCCC;
+
+ 
+
+}
+.buttons 
+
+{
+ 
+  font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+
+ text-align:center;
+/* background-color:#EFEFEF; */
+ vertical-align:middle;
+ /* border:1px solid #FFFFFF; */
+ text-decoration: none;
+ padding:5px;
+ padding-top:8px;
+ display:inline-block;
+ width:95px;
+ font-weight:bold;
+ color:#333333;
+ border:#999999 1px solid;
+  background-image:url(../../Images/button_new.gif);
+
+ 
+ height:18px;
+
+}
+
+
+.label
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ padding-left:20px;
+ padding-right:20px;
+ padding-top:10px;
+ padding-bottom:10px;
+ font-weight:bold;
+
+ vertical-align:middle;
+}
+
+.submit 
+
+{
+ font-style:normal;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+
+ text-align:center;
+/* background-color:#EFEFEF; */
+ vertical-align:middle;
+ 
+ border:1px solid #FFFFFF;
+ text-decoration: none;
+ padding:5px;
+ width:105px;
+ height:35px;
+ color:#333333;
+ font-weight:bold;
+ border:#999999 1px solid;
+ background-image:url(../../Images/button_new.gif);
+
+
+}
+
+fieldset { border:1px solid #FFFFFF; }
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #999999;
+  color:#333333;
+  font-size:90%;
+  text-align:right;
+  }
+
